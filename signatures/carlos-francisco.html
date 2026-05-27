@@ -2,17 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="color-scheme" content="light">
 <title>Carlos Francisco Fernandez — FinkaMetals</title>
 <style>
-  /* Standalone preview styling (stripped when pasted into email) */
-  body { font-family: 'Manrope', Helvetica, Arial, sans-serif; margin: 40px; background: #ffffff; }
-
-  /* Signature dark-mode swap (preserved when pasted into email) */
- 
+  /* Page-level styling — applies only to the standalone preview, NOT to the email signature once pasted.
+     Body styling and <head> content are stripped when the signature is copy-pasted into Apple Mail / Gmail. */
+  body {
+    font-family: 'Manrope', Helvetica, Arial, sans-serif;
+    margin: 40px;
+    background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a1a1a; }
+    /* Override hardcoded dark gray text in the table so it's legible on the dark page */
+    body table td[style*="#414042"],
+    body table strong[style*="#414042"],
+    body table span[style*="#414042"],
+    body table a[style*="#414042"] {
+      color: #d8d8d8 !important;
+    }
+  }
 </style>
 </head>
 <body>
+
+<!-- Signature dark-mode swap — kept in <body> so it travels with the table when copied into email -->
+<style>
+  @media (prefers-color-scheme: dark) {
+    .fm-logo-light { display: none !important; }
+    .fm-logo-dark { display: inline-block !important; }
+  }
+</style>
 
 <table cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; font-family: 'Manrope', Helvetica, Arial, sans-serif; color: #414042;">
   <tr>
