@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <title>Carlos Francisco Fernandez — FinkaMetals</title>
 <style>
-  /* Page-level styling — applies only to the standalone preview, NOT to the email signature once pasted.
-     Body styling and <head> content are stripped when the signature is copy-pasted into Apple Mail / Gmail. */
+  /* Page-level styling — applies only to the standalone preview, NOT to the email signature once pasted. */
   body {
     font-family: 'Manrope', Helvetica, Arial, sans-serif;
     margin: 40px;
@@ -13,12 +12,16 @@
   }
   @media (prefers-color-scheme: dark) {
     body { background: #1a1a1a; }
-    /* Override hardcoded dark gray text in the table so it's legible on the dark page */
-    body table td[style*="#414042"],
-    body table strong[style*="#414042"],
-    body table span[style*="#414042"],
-    body table a[style*="#414042"] {
+    /* Flip dark text in the body cell to light, then restore red accents */
+    .fm-copy,
+    .fm-copy a,
+    .fm-copy span,
+    .fm-copy strong {
       color: #d8d8d8 !important;
+    }
+    .fm-copy strong[style*="#e62d19"],
+    .fm-copy span[style*="#e62d19"] {
+      color: #e62d19 !important;
     }
   }
 </style>
@@ -51,7 +54,7 @@
         style="display: none; width: 95px; height: auto; border: 0;"
       />
     </td>
-    <td valign="middle" style="border-left: 2px solid #e62d19; padding-left: 18px; font-family: 'Manrope', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.55; color: #414042;">
+    <td class="fm-copy" valign="middle" style="border-left: 2px solid #e62d19; padding-left: 18px; font-family: 'Manrope', Helvetica, Arial, sans-serif; font-size: 13.5px; line-height: 1.55; color: #414042;">
 
       <div style="margin-bottom: 6px; font-size: 15.5px;">
         <strong style="font-weight: 700; color: #414042;">Carlos Francisco Fernandez</strong>
