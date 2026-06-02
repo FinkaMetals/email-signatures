@@ -19,7 +19,7 @@ Gmail (and most non-Apple clients) cannot render SVG images, so the Apple versio
 - Jose Daniel Fernandez Navarro (Operations Lead) — https://finkametals.github.io/email-signatures/jose-daniel/jose-daniel.html
 - Santiago Herrera (Financial Lead) — https://finkametals.github.io/email-signatures/santiago-herrera/santiago-herrera.html
 - Daniela Ceballos Ruelas (Commercial Lead) — https://finkametals.github.io/email-signatures/daniela-ceballos/daniela-ceballos.html
-- Camila Arrien (Senior Finance & Operations Associate) — https://finkametals.github.io/email-signatures/camila-arrien/camila-arrien.html
+- Camila Arrien (Finance & Operations Associate) — https://finkametals.github.io/email-signatures/camila-arrien/camila-arrien.html
 
 The landing page at https://finkametals.github.io/email-signatures/ has both versions per person with copy buttons and full install instructions.
 
