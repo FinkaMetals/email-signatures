@@ -1,8 +1,17 @@
 # FinkaMetals Email Signatures
 
-Self-contained HTML email signatures for the FinkaMetals team.
+Self-contained HTML email signatures for the FinkaMetals team. The logo and LinkedIn icon are embedded directly in each file as data URLs, so the signatures depend on no external image hosting: they render offline, will not break if a server goes down, and survive being pasted into mobile mail apps.
 
-The logo and LinkedIn icon are embedded directly in each file (SVG and PNG as data URLs), so the signatures depend on no external image hosting. They render identically offline, will not break if a link or server goes down, and survive being pasted into mobile mail apps. This replaces the earlier hosted-image version of this repo.
+## Two versions per person
+
+Email clients disagree on image formats, so each person has two signature versions that differ only in the logo:
+
+| Version | Logo format | Use it for |
+|---------|-------------|------------|
+| `<name>.html` + `<name>.mailsignature` | SVG (vector, sharp, dark-mode adaptive) | **Apple Mail** on Mac and iPhone |
+| `<name>-web.html` | PNG (baked-in white halo, universal) | **Gmail, Outlook**, and every other client |
+
+Gmail (and most non-Apple clients) cannot render SVG images, so the Apple version's logo shows as a broken image there. The `-web.html` PNG version renders everywhere and stays legible on dark backgrounds via a halo baked into the pixels. On Mac Apple Mail the `.mailsignature` file is installed by editing the signature file on disk; everything else is copy-paste.
 
 ## Live signatures
 
@@ -12,22 +21,11 @@ The logo and LinkedIn icon are embedded directly in each file (SVG and PNG as da
 - Daniela Ceballos Ruelas (Commercial Lead) — https://finkametals.github.io/email-signatures/daniela-ceballos/daniela-ceballos.html
 - Camila Arrien (Senior Finance & Operations Associate) — https://finkametals.github.io/email-signatures/camila-arrien/camila-arrien.html
 
-## Files
-
-Each person has a folder with two files:
-
-| File | Use it for |
-|------|------------|
-| `<name>.mailsignature` | **Mac Apple Mail** — installed by editing the signature file directly |
-| `<name>.html` | **iPhone Apple Mail, Gmail, Outlook**, and everything else — installed by copy-paste |
+The landing page at https://finkametals.github.io/email-signatures/ has both versions per person with copy buttons and full install instructions.
 
 ## Design spec
 
 - Brand red `#e62d19`, dark gray `#414042`, Manrope (Helvetica/Arial fallback)
 - Logo 78x126px; contact text at 90% scale (name 12.6px, body 10.8px)
 - Stacked name/title; vertical red divider; LinkedIn-only social row
-- Dark-mode legibility via a white halo on the FINKA wordmark (classic SVG stroke attributes, no `rgba`) plus a `prefers-color-scheme` fill swap where the client honors it
-
-## Install instructions
-
-Per-client step-by-step instructions (Mac Apple Mail, iPhone Apple Mail, Gmail, Outlook) to be added here.
+- Dark-mode legibility via a white halo on the FINKA wordmark: SVG version uses classic stroke attributes plus a `prefers-color-scheme` fill swap where honored; PNG version has the halo baked into the pixels
