@@ -1,74 +1,33 @@
-# FinkaMetals email signatures
+# FinkaMetals Email Signatures
 
-Hosted email signatures for the FinkaMetals team.
+Self-contained HTML email signatures for the FinkaMetals team.
 
-## Live URL
+The logo and LinkedIn icon are embedded directly in each file (SVG and PNG as data URLs), so the signatures depend on no external image hosting. They render identically offline, will not break if a link or server goes down, and survive being pasted into mobile mail apps. This replaces the earlier hosted-image version of this repo.
 
-Once GitHub Pages is enabled, signatures are served at:
+## Live signatures
 
-```
-https://finkametals.github.io/email-signatures/signatures/{person}.html
-```
+- Carlos Francisco Fernandez (CEO) — https://finkametals.github.io/email-signatures/carlos-francisco/carlos-francisco.html
+- Jose Daniel Fernandez Navarro (Operations Lead) — https://finkametals.github.io/email-signatures/jose-daniel/jose-daniel.html
+- Santiago Herrera (Financial Lead) — https://finkametals.github.io/email-signatures/santiago-herrera/santiago-herrera.html
+- Daniela Ceballos Ruelas (Commercial Lead) — https://finkametals.github.io/email-signatures/daniela-ceballos/daniela-ceballos.html
+- Camila Arrien (Senior Finance & Operations Associate) — https://finkametals.github.io/email-signatures/camila-arrien/camila-arrien.html
 
-## Structure
+## Files
 
-```
-email-signatures/
-├── README.md
-├── assets/
-│   ├── finkametals-logo-color.png   Light mode logo
-│   ├── finkametals-logo-dark.png    Dark mode logo (red preserved, FINKA white)
-│   ├── finkametals-logo-white.png   Pure white monochrome (alternate use)
-│   ├── social-linkedin.png          LinkedIn icon
-│   └── social-x.png                 X icon
-└── signatures/
-    └── carlos-francisco.html        One file per team member
-```
+Each person has a folder with two files:
 
-## Adding a new signature
+| File | Use it for |
+|------|------------|
+| `<name>.mailsignature` | **Mac Apple Mail** — installed by editing the signature file directly |
+| `<name>.html` | **iPhone Apple Mail, Gmail, Outlook**, and everything else — installed by copy-paste |
 
-1. Copy `signatures/carlos-francisco.html` to `signatures/{name}.html`.
-2. Replace name, title, email, phone, address, LinkedIn URL, X URL.
-3. Commit and push. GitHub Pages auto-deploys.
+## Design spec
 
-## Design notes
+- Brand red `#e62d19`, dark gray `#414042`, Manrope (Helvetica/Arial fallback)
+- Logo 78x126px; contact text at 90% scale (name 12.6px, body 10.8px)
+- Stacked name/title; vertical red divider; LinkedIn-only social row
+- Dark-mode legibility via a white halo on the FINKA wordmark (classic SVG stroke attributes, no `rgba`) plus a `prefers-color-scheme` fill swap where the client honors it
 
-- Layout: V4 stacked logo on the left, vertical red separator, contact details on the right.
-- Font stack: Manrope first (brand), falls back to Helvetica then Arial then system sans-serif. Most recipients see the fallback, since email clients don't load Google Fonts.
-- Colors: red `#e62d19` for accents and logo elements, dark gray `#414042` for body text.
-- Dark mode: Apple Mail swaps the logo automatically via a `prefers-color-scheme` media query. Gmail strips the style block and shows the color logo on dark backgrounds (functional, no regression).
+## Install instructions
 
-## Installing the signature
-
-### Apple Mail (macOS)
-
-The signature editor in macOS Mail strips HTML when pasted directly. The workaround:
-
-1. Open the signature file in Safari (e.g. `https://finkametals.github.io/email-signatures/signatures/carlos.html`).
-2. Select all (Cmd+A) and copy (Cmd+C).
-3. Mail → Settings → Signatures. Create a new signature placeholder (any name).
-4. Paste (Cmd+V) into the signature editor.
-5. Quit Mail completely.
-6. In Finder, open `~/Library/Mail/V10/MailData/Signatures/` (the V number may vary).
-7. Find the `.mailsignature` file matching the signature you just created (sort by date, newest is yours).
-8. Open it in TextEdit. Replace the body with the contents of the `.html` file (keeping the headers at the top).
-9. Right-click the file → Get Info → Locked. This prevents Mail from rewriting it on next launch.
-10. Reopen Mail. The signature now renders correctly.
-
-### Apple Mail (iOS)
-
-1. Open the signature file in Safari on iOS.
-2. Long press → Select All → Copy.
-3. Settings → Mail → Signature.
-4. Paste. Done.
-
-iOS Mail handles this more smoothly than macOS.
-
-### Gmail (web)
-
-1. Open the signature file in any browser.
-2. Select all (Ctrl/Cmd+A) and copy.
-3. Gmail → Settings (gear) → See all settings → General → Signature.
-4. Create a new signature, paste the content.
-5. Set defaults (which signature appears for new mail and replies).
-6. Save changes.
+Per-client step-by-step instructions (Mac Apple Mail, iPhone Apple Mail, Gmail, Outlook) to be added here.
