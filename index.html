@@ -118,6 +118,12 @@ footer a{color:var(--red);text-decoration:none;}
 .sig-frame .btn-primary:hover{background:#cf2715;border-color:#cf2715;color:#fff;}
 .sig-frame .cg-label{color:#6e6f72;}
 .sig-frame .cg-label em{color:#9a9b9e;}
+
+.nav{margin-left:auto;display:flex;gap:26px;align-items:center;}
+.nav a{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:color .15s ease,border-color .15s ease;}
+.nav a:hover{color:var(--red);}
+.nav a.active{color:var(--text);border-bottom-color:var(--red);}
+@media (max-width:680px){ .nav{gap:15px;} .topbar .wrap{flex-wrap:wrap;} }
 </style>
 </head>
 <body>
@@ -150,7 +156,11 @@ footer a{color:var(--red);text-decoration:none;}
 <path d="M959.753 485.546V315.802H1076.15V331.322H977.697V470.026H1079.79V485.546H959.753ZM975.757 406.979V391.702H1065.48V406.979H975.757Z" fill="white"/>
 <path d="M667.53 485.546V315.802H682.322L759.919 448.202H752.16L829.029 315.802H843.821V485.546H826.604V342.719H830.726L759.919 463.964H751.432L680.14 342.719H684.747V485.546H667.53Z" fill="white"/>
 </svg>
-<span class="label">Email Signatures</span></div></div>
+<nav class="nav">
+  <a href="../">Home</a>
+  <a href="./" class="active">Signatures</a>
+  <a href="../backgrounds/">Backgrounds</a>
+</nav></div></div>
 
 <div class="wrap">
   <section class="hero">
